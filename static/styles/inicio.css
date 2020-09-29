@@ -1,0 +1,22 @@
+#welcomecontainer {
+    position: absolute;
+    margin: 50px;
+    max-width: 400px;
+    max-height: 200px;
+    padding: 20px;
+    background-color:var(--color-container);
+    border-radius: 10px;
+    float:left;
+}
+
+#welcomecontainer h3,p{
+    padding: 15px;
+    font-family: Poppins;
+}
+
+img{
+    margin-top:6%;
+    margin-right:40%;
+    width: 150px;
+    float:right;
+}

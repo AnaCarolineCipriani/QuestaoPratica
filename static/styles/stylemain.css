@@ -1,0 +1,40 @@
+:root{
+    --color-background-nav:#5C246E;
+    --color-hover:#7A378B;
+    --color-container:#efefef;
+    --color-table:#BDA0CB;
+}
+
+*{margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5C246E;
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-family:"Open Sans";
+
+  }
+  
+li a:hover {
+    background-color:var(--color-hover);
+  }
+
+
+
+
+
+

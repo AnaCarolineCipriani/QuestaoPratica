@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Jogos</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylemain.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/inserir_jogo.css') }}">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#">Jogador</a></li>
+            <li><a href="/listar_jogos">Jogos</a></li>
+            <li><a href="/form_inserir_jogo">Registrar Jogo</a></li>
+        </ul>
+    </nav>
 
-    <form action ="/inserir_jogo" method ="post">
-       Placar: <input type="int" name="placar">
-       <input type="submit" value="Inserir">
-    </form>
-
-
-
-
-    
+    <div class="alinhar">
+        <div id="insertcontainer">
+            <section>
+                <form action ="/inserir_jogo" method ="post">
+                    <h4>Insira o seu placar:</h4>
+                    <input type="text" name="placar" placeholder="0">
+                    <input type="submit" value="Inserir">
+                </form>
+            </section>
+        </div>
+    </div>
+    <img  class="alinhar" src="imgs/bkb.png"> 
 </body>
 </html>

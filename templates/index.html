@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BasketHub</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylemain.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/inicio.css') }}">
 </head>
 <body>
-    
-<a href = "/form_inserir_jogo"> Inserir Jogo</a>
-<a href = "/listar_jogos"> Listar Jogos</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#">Jogador</a></li>
+            <li><a href="/listar_jogos">Jogos</a></li>
+            <li><a href="/form_inserir_jogo">Registrar Jogo</a></li>
+        </ul>
+    </nav>
+    <div id="welcomecontainer">
+        <section>
+            <h3>Boas vindas!</h3>
+            <p>Esse é o BasketHub, uma plataforma que permite você, usuário, registrar os pontos de cada partida de basquete que jogou com seus amigos!</p>
+        </section>
+    </div>
+    <img src="imgs/bkb.png">
 
 
 

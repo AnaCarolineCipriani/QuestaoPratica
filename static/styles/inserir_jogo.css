@@ -1,0 +1,29 @@
+#insertcontainer {
+    margin: 50px;
+    max-width: 400px;
+    max-height: 200px;
+    padding: 30px 50px;
+    background-color:var(--color-container);
+    border-radius: 10px; 
+    text-align: center;
+}
+
+#insertcontainer h4, input {
+    margin-bottom: 15px;
+    font-family: Poppins;
+    padding: 10px;
+}
+
+#insertcontainer a {
+    padding: 9px;
+    background-color: purple;
+    text-decoration:none;
+    font-family: Poppins;
+    color:white;
+}
+
+.alinhar {
+    display: flex; 
+    align-items: center;     
+    justify-content: center;  
+}

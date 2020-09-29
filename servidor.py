@@ -3,7 +3,7 @@ from Jogo import *
 
 
 
-app = Flask(__name__, static_url_path="", static_folder="templates")
+app = Flask(__name__, static_url_path="", template_folder="templates", static_folder="static")
 
 @app.route("/")
 def iniciar():
@@ -28,8 +28,8 @@ def inserir_jogo():
     return redirect("/")
 
 
-@app.route("/listar_jogo")
-def listar_jogo():
+@app.route("/listar_jogos")
+def listar_jogos():
     return render_template("listar_jogos.html", jogos=Jogo.select())
 
 
@@ -37,7 +37,7 @@ def listar_jogo():
 lista_placares=[]
 jogos = Jogo.select()
 for jogo in jogos:
-    print(jogo.Placar)
+    #print(jogo.Placar)
     lista_placares.append(jogo.Placar)
 
 def set_minimo_temporada(Placar):
@@ -63,7 +63,7 @@ def set_maximo_temporada(Placar):
         else:
             MaximoDaTemp = max(lista_placares)
             lista_placares.append(MaximoDaTemp)
-            print(lista_placares)
+            #print(lista_placares)
             return MaximoDaTemp
 
 

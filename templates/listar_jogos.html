@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Jogos</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylemain.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/jogos.css') }}">
 </head>
+<nav>
+  <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="#">Jogador</a></li>
+      <li><a href="/listar_jogos">Jogos</a></li>
+      <li><a href="/form_inserir_jogo">Registrar Jogo</a></li>
+  </ul>
+</nav>
 <body>
-
-    
-    {%for jogo in jogos:%}
-      <p> Placar: {{jogo.Placar}}</p>
-      <p>Mínimo Da Temporada: {{jogo.MinimoDaTemp}}</p>
-      <p>Máximo Da Temporada: {{jogo.MaximoDaTemp}}</p>
-      <p>Quebra Recorde Mínimo: {{jogo.QuebraRecMinimo}}</p>
-      <p>Quebra Recorde Máximo: {{jogo.QuebraRecMaximo}}</p>
+    <div id=containertable>
+      <table class="tablestyle">
+          <thead>
+              <th class="tablestyle-0lax">Jogo</th>
+              <th class="tablestyle-0lax">Placar</th>
+              <th class="tablestyle-0lax">Mínimo da Temporada</th>
+              <th class="tablestyle-0lax">Máximo da Temporada</th>
+              <th class="tablestyle-0lax">Quebra Recorde Mínimo</th>
+              <th class="tablestyle-0lax">Quebra Recorde Máximo</th>
+          
+          </thead>
+          <tbody>
+            {%for jogo in jogos:%}
+          <tr>
+              <td class="tablestyle-0lax">{{jogo.Id}}</td>
+              <td class="tablestyle-0lax">{{jogo.Placar}}</td>
+              <td class="tablestyle-0lax">{{jogo.MinimoDaTemp}}</td>
+              <td class="tablestyle-0lax">{{jogo.MaximoDaTemp}}</td>
+              <td class="tablestyle-0lax">{{jogo.QuebraRecMinimo}}</td>
+              <td class="tablestyle-0lax">{{jogo.QuebraRecMaximo}}</td>
+          </tr>
+            {%endfor%}
+          </tbody>   
+      </table>
+    </div>
       
     
 </body>
