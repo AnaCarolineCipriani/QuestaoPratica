@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Jogos</title>
+</head>
+<body>
+
+    
+    {%for jogo in jogos:%}
+      <p> Placar: {{jogo.Placar}}</p>
+      <p>Mínimo Da Temporada: {{jogo.MinimoDaTemp}}</p>
+      <p>Máximo Da Temporada: {{jogo.MaximoDaTemp}}</p>
+      <p>Quebra Recorde Mínimo: {{jogo.QuebraRecMinimo}}</p>
+      <p>Quebra Recorde Máximo: {{jogo.QuebraRecMaximo}}</p>
+      
+    
+</body>
+</html>
