@@ -66,11 +66,13 @@ def set_maximo_temporada(Placar):
 def set_quebra_recorde_minimo(Placar):
     QuebraRecMinimo = 0
     for j in jogos: 
-        if min(lista_placares[:-1]) > Placar:
+        if min(lista_placares[:-2]) > Placar:
             QuebraRecMinimo += 1
+            print(lista_placares)
             return QuebraRecMinimo
         else:
             QuebraRecMinimo = 0
+            print(lista_placares)
             return QuebraRecMinimo
 
 
