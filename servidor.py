@@ -22,8 +22,8 @@ def inserir_jogo():
     Jogo.create(Placar=placar_atual,
                 MinimoDaTemp = set_minimo_temporada(int(placar_atual)),
                 MaximoDaTemp = set_maximo_temporada(int(placar_atual)),
-                QuebraRecMinimo = 0, 
-                QuebraRecMaximo = 0)
+                QuebraRecMinimo = set_quebra_recorde_minimo(int(placar_atual)), 
+                QuebraRecMaximo = set_quebra_recorde_maximo(int(placar_atual)))
     
     return redirect("/")
 
@@ -55,17 +55,35 @@ def set_minimo_temporada(Placar):
 def set_maximo_temporada(Placar):
     for j in jogos:
         if max(lista_placares) < Placar:
-            #print(lista_placares) teste
-            #print(Placar) teste
             MaximoDaTemp = Placar
             lista_placares.append(MaximoDaTemp)
             return MaximoDaTemp
         else:
             MaximoDaTemp = max(lista_placares)
             lista_placares.append(MaximoDaTemp)
-            #print(lista_placares)
             return MaximoDaTemp
 
+def set_quebra_recorde_minimo(Placar):
+    QuebraRecMinimo = 0
+    for j in jogos: 
+        if min(lista_placares[:-1]) > Placar:
+            QuebraRecMinimo += 1
+            return QuebraRecMinimo
+        else:
+            QuebraRecMinimo = 0
+            return QuebraRecMinimo
+
+
+def set_quebra_recorde_maximo(Placar):
+    QuebraRecMaximo = 0
+    for j in jogos: 
+        if max(lista_placares[:-1]) < Placar:
+            QuebraRecMaximo +=1
+            
+            return QuebraRecMaximo
+        else:
+            QuebraRecMaximo = 0
+            return QuebraRecMaximo
 
 
 app.run(debug=True)
