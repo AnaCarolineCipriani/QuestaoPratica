@@ -19,13 +19,15 @@ def form_inserir_jogo():
 @app.route("/inserir_jogo", methods=["POST"])
 def inserir_jogo():
     placar_atual = request.form["placar"]
+    if int(placar_atual) < 0 or int(placar_atual) > 1000:
+        return render_template("exceptions.html")
     Jogo.create(Placar=placar_atual,
                 MinimoDaTemp = set_minimo_temporada(int(placar_atual)),
                 MaximoDaTemp = set_maximo_temporada(int(placar_atual)),
                 QuebraRecMinimo = set_quebra_recorde_minimo(int(placar_atual)), 
                 QuebraRecMaximo = set_quebra_recorde_maximo(int(placar_atual)))
     
-    return redirect("/")
+    return redirect("/listar_jogos")
 
 
 @app.route("/listar_jogos")

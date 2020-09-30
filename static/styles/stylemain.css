@@ -35,6 +35,28 @@ li a:hover {
 
 
 
+.alinhar {
+    display: flex; 
+    align-items: center;     
+    justify-content: center;  
+}
+
+#exceptioncontainer {
+    margin: 50px;
+    max-width: 400px;
+    max-height: 200px;
+    padding: 30px 50px;
+    background-color:var(--color-container);
+    border-radius: 10px; 
+    text-align: center;
+    font-family: Poppins;
+}
+
+h5 {
+  color:orange;
+}
+
+
 
 
 
