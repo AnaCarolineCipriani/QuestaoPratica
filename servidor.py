@@ -65,11 +65,13 @@ def set_maximo_temporada(Placar):
             lista_placares.append(MaximoDaTemp)
             return MaximoDaTemp
 
+count = 0 
+
 def set_quebra_recorde_minimo(Placar):
     QuebraRecMinimo = 0
     for j in jogos: 
         if min(lista_placares[:-2]) > Placar:
-            QuebraRecMinimo += 1
+            QuebraRecMinimo = 1
             print(lista_placares)
             return QuebraRecMinimo
         else:
@@ -81,9 +83,8 @@ def set_quebra_recorde_minimo(Placar):
 def set_quebra_recorde_maximo(Placar):
     QuebraRecMaximo = 0
     for j in jogos: 
-        if max(lista_placares[:-1]) < Placar:
-            QuebraRecMaximo +=1
-            
+        if max(lista_placares[:-1]) < Placar or max(lista_placares[:-1]) == Placar:
+            QuebraRecMaximo = 1
             return QuebraRecMaximo
         else:
             QuebraRecMaximo = 0

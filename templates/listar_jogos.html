@@ -7,15 +7,17 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylemain.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/jogos.css') }}">
 </head>
-<nav>
-  <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="#">Jogador</a></li>
-      <li><a href="/listar_jogos">Jogos</a></li>
-      <li><a href="/form_inserir_jogo">Registrar Jogo</a></li>
-  </ul>
-</nav>
 <body>
+  <nav>
+    <ul>
+        <li><a href="/">BasketHub</a></li>
+        <li><a href="/">Início</a></li>
+        <li><a href="#">Jogador</a></li>
+        <li><a href="/listar_jogos">Jogos</a></li>
+        <li><a href="/form_inserir_jogo">Registrar Jogo</a></li>
+        <img class="logo" src="images/bkblogo.png">
+    </ul>
+  </nav>
     <div id=containertable>
       <table class="tablestyle">
           <thead>
@@ -30,7 +32,7 @@
           <tbody>
             {%for jogo in jogos:%}
           <tr>
-              <td class="tablestyle-0lax">{{jogo.Id}}</td>
+              <td class="tablestyle-0lax">{{jogo.id}}</td>
               <td class="tablestyle-0lax">{{jogo.Placar}}</td>
               <td class="tablestyle-0lax">{{jogo.MinimoDaTemp}}</td>
               <td class="tablestyle-0lax">{{jogo.MaximoDaTemp}}</td>
@@ -41,6 +43,7 @@
           </tbody>   
       </table>
     </div>
+    
       
     
 </body>

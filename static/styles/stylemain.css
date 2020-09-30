@@ -33,8 +33,12 @@ li a:hover {
     background-color:var(--color-hover);
   }
 
-
-
+.logo {
+  margin: 4px;
+  margin-top:-5px;
+  width:50px;
+  }
+  
 .alinhar {
     display: flex; 
     align-items: center;     
@@ -55,6 +59,11 @@ li a:hover {
 h5 {
   color:orange;
 }
+
+.bkb_width{
+  width: 150px;
+}
+
 
 
 
