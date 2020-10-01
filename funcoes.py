@@ -65,3 +65,11 @@ def set_rec_minimo(Placar):
                 else:
                     QuebraRecMinimo = max(lista_recordes_max)
                     return QuebraRecMinimo
+
+def set_basketcoin():
+    if max(lista_recordes_max) == 2: 
+        basketcoin = 10 
+        return basketcoin
+    elif lista_recordes_max[0] == 5:
+        basketcoin = 30 
+        return basketcoin 

@@ -31,8 +31,15 @@ def inserir_jogo():
     return redirect("/listar_jogos")
 
 
+def show_basketcoin():
+    bkc = set_basketcoin()
+    return bkc
+
+
 @app.route("/listar_jogos")
 def listar_jogos():
-    return render_template("listar_jogos.html", jogos=Jogo.select())
+    return render_template("listar_jogos.html", jogos=Jogo.select(), bkb = show_basketcoin())
+
+
 
 app.run(debug=True)

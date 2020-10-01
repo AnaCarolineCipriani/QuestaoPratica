@@ -48,3 +48,17 @@
 table tbody tr:nth-child(even){
     background-color: var(--color-table);
 }
+
+
+.basketcoin {
+    float:right;
+}
+.basketcoin img {
+    margin-left: -10px;
+    width:50px;
+}
+.basketcoin p {
+    margin-top:15px;
+    color:white;
+    font-family: Poppins;
+}
