@@ -55,6 +55,7 @@ def set_rec_minimo(Placar):
     for j in jogos:
         if min(lista_placares[:-2]) > Placar:
             QuebraRecMinimo = max(lista_recordes_min) + 1
+            print(min(lista_placares[:-2]))
             lista_recordes_min.append(QuebraRecMinimo)
             return QuebraRecMinimo
         else:
@@ -63,13 +64,26 @@ def set_rec_minimo(Placar):
                     QuebraRecMinimo = max(lista_recordes_min)
                     return QuebraRecMinimo
                 else:
-                    QuebraRecMinimo = max(lista_recordes_max)
+                    QuebraRecMinimo = max(lista_recordes_min)
                     return QuebraRecMinimo
 
+
+
 def set_basketcoin():
-    if max(lista_recordes_max) == 2: 
-        basketcoin = 10 
-        return basketcoin
-    elif lista_recordes_max[0] == 5:
-        basketcoin = 30 
-        return basketcoin 
+    for i in range(len(lista_recordes_max)):
+        if len(lista_recordes_max) != 0:
+            if max(lista_recordes_max) > 0 and max(lista_recordes_max) < 3:
+                basketcoin = 5
+                return basketcoin
+            elif max(lista_recordes_max) > 2 and max(lista_recordes_max) < 6:
+                basketcoin = 10
+                return basketcoin
+            else:
+                if max(lista_recordes_max) > 5 and max(lista_recordes_max) < 11:
+                    basketcoin = 20
+                    return basketcoin
+        else:
+            basketcoin = 0
+            return basketcoin
+
+  
