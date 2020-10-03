@@ -25,6 +25,7 @@ CSS
 <p>CTRL + Clique com o botão esquerdo do mouse</p>
 <p>A aplicação irá abrir na web</p>
 <p> <strong> Clique em Registrar Jogo, então, será redirecionado(a) para a interface de consulta de dados</strong></p>
+<p><strong> Dessa forma, poderá continuar registrando os jogos e acompanhando as pontuações</strong></p>
 
 <img src="public/rodar_api.gif">
 
