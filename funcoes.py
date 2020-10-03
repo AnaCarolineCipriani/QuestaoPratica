@@ -3,7 +3,6 @@ from Jogo import *
 lista_placares=[]
 jogos = Jogo.select()
 for jogo in jogos:
-    #print(jogo.Placar)
     lista_placares.append(jogo.Placar)
 
 def set_minimo_temporada(Placar):
@@ -55,7 +54,6 @@ def set_rec_minimo(Placar):
     for j in jogos:
         if min(lista_placares[:-2]) > Placar:
             QuebraRecMinimo = max(lista_recordes_min) + 1
-            print(min(lista_placares[:-2]))
             lista_recordes_min.append(QuebraRecMinimo)
             return QuebraRecMinimo
         else:
@@ -70,8 +68,8 @@ def set_rec_minimo(Placar):
 
 
 def set_basketcoin():
-    for i in range(len(lista_recordes_max)):
-        if len(lista_recordes_max) != 0:
+    if len(lista_recordes_max) != 0:
+        for i in range(len(lista_recordes_max)):
             if max(lista_recordes_max) > 0 and max(lista_recordes_max) < 3:
                 basketcoin = 5
                 return basketcoin
@@ -79,11 +77,11 @@ def set_basketcoin():
                 basketcoin = 10
                 return basketcoin
             else:
-                if max(lista_recordes_max) > 5 and max(lista_recordes_max) < 11:
+                if max(lista_recordes_max) > 5:
                     basketcoin = 20
                     return basketcoin
-        else:
-            basketcoin = 0
-            return basketcoin
+    else:
+        basketcoin = 0
+        return basketcoin
 
   

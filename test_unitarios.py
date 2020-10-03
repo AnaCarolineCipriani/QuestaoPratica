@@ -3,8 +3,8 @@ import pytest
 from Jogo import *
 from funcoes import *
 
-#Os testes dependem do que está inserido no banco de dados. 
-#Os testes abaixo foram feitos com apenas 2 jogos cadastrados no banco de dados : placares 12, 24 e 10.
+#Os testes abaixo dependem do que está inserido no banco de dados. 
+#Os testes abaixo foram feitos com apenas 3 jogos cadastrados no banco de dados : placares 12, 24 e 10.
 
 def test_set_minimo_temporada():
     assert set_minimo_temporada(10) == 10

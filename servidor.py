@@ -22,11 +22,19 @@ def inserir_jogo():
     placar_atual = request.form["placar"]
     if int(placar_atual) < 0 or int(placar_atual) > 1000:
         return render_template("exceptions.html")
-    Jogo.create(Placar=placar_atual,
-                MinimoDaTemp = set_minimo_temporada(int(placar_atual)),
-                MaximoDaTemp = set_maximo_temporada(int(placar_atual)),
-                QuebraRecMinimo = set_rec_minimo(int(placar_atual)), 
-                QuebraRecMaximo = set_rec_maximo(int(placar_atual)))
+    Jogo.create(Placar=12,
+                MinimoDaTemp = 12,
+                MaximoDaTemp = 12,
+                QuebraRecMinimo = 0, 
+                QuebraRecMaximo = 0)
+
+    """
+    Jogo.create(Placar=12,                       #Utilizei para a primeira insercao no banco de dados
+                MinimoDaTemp = 12,               #Rodo a aplicacao com esses valores, insiro um numero qualquer no registrar jogo
+                MaximoDaTemp = 12,               #E volto com os metodos acima para rodar novamente e normalmente
+                QuebraRecMinimo = 0, 
+                QuebraRecMaximo = 0)    
+    """
     
     return redirect("/listar_jogos")
 
