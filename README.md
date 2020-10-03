@@ -20,7 +20,7 @@ CSS
 <p>pip install pytest </p>
 
 ## Rodar o Projeto 
-<p>Clicar com o botão direito do mouse no editor, e clicar em Run Python File in Terminal </p>
+<p> Ir no arquivo servidor.py, clicar com o botão direito do mouse no editor, e clicar em Run Python File in Terminal </p>
 <p>Após isso, irá aparecer uma rota no terminal : 127.0.0:5000 </p>
 <p>CTRL + Clique com o botão esquerdo do mouse</p>
 <p>A aplicação irá abrir na web</p>
