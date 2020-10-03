@@ -24,6 +24,7 @@ CSS
 <p>Após isso, irá aparecer uma rota no terminal : 127.0.0:5000 </p>
 <p>CTRL + Clique com o botão esquerdo do mouse</p>
 <p>A aplicação irá abrir na web</p>
+<p> <strong> Clique em Registrar Jogo, então, será redirecionado(a) para a interface de consulta de dados</strong></p>
 
 <img src="public/rodar_api.gif">
 
