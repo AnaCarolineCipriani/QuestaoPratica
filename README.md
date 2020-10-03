@@ -14,7 +14,7 @@ CSS
 ## Instalações 
 <p>Instalar a linguagem de programação Python <strong>(incluindo o pip)</strong> - https://www.python.org/downloads/ </p>
 <p>Instalar um editor de código-fonte (Visual Studio Code) - https://code.visualstudio.com/download</p>
-<p>No Visual Studio Code, abrir um Novo Terminal e digitar : </p>
+<p>No Visual Studio Code, ir em Terminal - Novo Terminal e digitar : </p>
 <p>pip install flask </p>
 <p>pip install peewee </p>
 <p>pip install pytest </p>
