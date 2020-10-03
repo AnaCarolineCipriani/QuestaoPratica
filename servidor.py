@@ -20,7 +20,7 @@ def form_inserir_jogo():
 @app.route("/inserir_jogo", methods=["POST"])
 def inserir_jogo():
     placar_atual = request.form["placar"]
-    if int(placar_atual) < 0 or int(placar_atual) > 1000:
+    if int(placar_atual) < 0 or int(placar_atual) > 999:
         return render_template("exceptions.html")
     Jogo.create(Placar=placar_atual,
                 MinimoDaTemp = set_minimo_temporada(int(placar_atual)),
