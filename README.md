@@ -18,6 +18,7 @@ CSS
 <p>pip install flask </p>
 <p>pip install peewee </p>
 <p>pip install pytest </p>
+<p>Adicione a extensão do Python no Visual Studio Code</p>
 
 ## Rodar o Projeto 
 <p> Ir no arquivo servidor.py, clicar com o botão direito do mouse no editor, e clicar em Run Python File in Terminal </p>
